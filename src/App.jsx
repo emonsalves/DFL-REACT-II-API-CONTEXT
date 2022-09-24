@@ -1,9 +1,9 @@
 import "./App.css"
-import Search from "./components/search"
+import PageLayout from "./layout/PageLayout"
 function App() {
   return (
     <div className="App">
-     <Search/>
+      <PageLayout/>
     </div>
   )
 }
