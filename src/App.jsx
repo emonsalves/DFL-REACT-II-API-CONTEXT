@@ -1,9 +1,9 @@
 import "./App.css"
-
+import Search from "./components/search"
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+     <Search/>
     </div>
   )
 }
