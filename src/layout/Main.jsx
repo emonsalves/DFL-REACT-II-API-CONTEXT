@@ -6,13 +6,13 @@ import NotFound from "../pages/NotFound"
 
 function Main() {
   return (
-    <>
+    <div>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/Favorites" element={<Favorites />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </div>
   )
 }
 

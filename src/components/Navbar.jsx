@@ -1,10 +1,10 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-export default function Navbar({ fixed }) {
+export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
   return (
-    <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3">
+    <nav className="flex min-w-full top-0 flex-wrap items-center justify-between px-2 py-3 bg-blue-500 z-10">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <p className="cursor-default text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white">

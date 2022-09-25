@@ -6,7 +6,7 @@ function App() {
   const { test } = useContext(MyContext)
 
   return (
-    <div className="App">
+    <div>
       <PageLayout />
     </div>
   )

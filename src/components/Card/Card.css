@@ -1,0 +1,13 @@
+.content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.test:hover {
+    transition: 5s;
+}
+
+.image-cover {
+    height: 260px;
+}

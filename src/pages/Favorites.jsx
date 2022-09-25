@@ -2,8 +2,8 @@ import React from "react"
 
 function Favorites() {
   return (
-    <div>
-      <h1>Favorites</h1>
+    <div className="flex flex-col justify-center items-center min-h-full bg-red-500">
+      fav
     </div>
   )
 }
