@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react"
+import Endbar from "../components/Endbar"
 
 function Footer() {
-  return (
-    <div><h1>Footer</h1></div>
-  )
+  return <Endbar />
 }
 
 export default Footer

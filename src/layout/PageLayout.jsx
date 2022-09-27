@@ -5,7 +5,7 @@ import Main from "./Main"
 
 function PageLayout() {
   return (
-    <div className="PageLayout">
+    <div className="min-h-screen">
       <Header />
       <Main />
       <Footer />
