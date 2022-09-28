@@ -1,24 +1,21 @@
-import React from "react"
+import React, { useContext } from "react"
+import MyContext from "../context/MyContext"
 import Card from "../components/Card/Card"
 
 function Home() {
+  const { data } = useContext(MyContext)
+
   return (
     <div className="Container flex flex-wrap gap-8 justify-center my-4">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {data &&
+        data.map((dato, index) => (
+          <Card
+            key={`${dato.name}-${index}`}
+            name={dato.name}
+            image={dato.img}
+            like={dato.like}
+          />
+        ))}
     </div>
   )
 }
