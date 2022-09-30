@@ -10,7 +10,7 @@ function Favorites() {
       {data &&
         data.map(
           (dato, index) =>
-            data.like === true && (
+            dato.like === true && (
               <Card
                 key={`${dato.name}-${index}`}
                 name={dato.name}

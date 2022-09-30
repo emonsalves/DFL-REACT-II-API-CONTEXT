@@ -1,9 +1,14 @@
-import React from "react"
+import { useContext, useState } from "react"
 import Heart from "../Heart/Heart"
+import MyContext from "../../context/MyContext"
 
-function Card({ name, image, like, id }) {
-  const clickLike = (e) => {
-    console.log(name, like)
+function Card({ name, image, like, index }) {
+  const { data, setData } = useContext(MyContext)
+  const dataUpdate = data
+
+  const clickLike = () => {
+    dataUpdate.splice(index, 1, { name: name, img: image, like: true })
+    setData(dataUpdate)
   }
 
   return (
@@ -16,10 +21,7 @@ function Card({ name, image, like, id }) {
         <Heart like={like} />
       </div>
       <div className="card-body">
-        <h2 className="card-title text-center font-bold">
-          {name}
-          {id}
-        </h2>
+        <h2 className="card-title text-center font-bold">{name}</h2>
       </div>
     </div>
   )

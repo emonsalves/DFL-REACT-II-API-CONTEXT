@@ -7,7 +7,10 @@ export default function Navbar() {
     <nav className="flex min-w-full top-0 flex-wrap items-center justify-between px-2 py-3 bg-blue-500 z-10">
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <p className="cursor-default text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white">
+          <p
+            className="cursor-default text-sm font
+          -bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+          >
             Gallery Digimons
           </p>
           <button

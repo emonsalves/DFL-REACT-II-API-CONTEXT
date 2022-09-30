@@ -13,7 +13,11 @@ const MyContextProvider = ({ children }) => {
       let data2 = await datos.data.map((x) => ({ ...x, like: false }))
       setData(data2)
     })()
-  }, [apiUrl])
+  }, [])
+
+  // useEffect(() => {
+  //   console.log("hola")
+  // })
 
   return (
     <MyContext.Provider value={{ test, setTest, data, setData, apiUrl }}>
