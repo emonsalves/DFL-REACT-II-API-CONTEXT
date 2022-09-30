@@ -1,9 +1,9 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import Heart from "../Heart/Heart"
 import MyContext from "../../context/MyContext"
 
 function Card({ name, image, like }) {
-  const { data, setData } = useContext(MyContext)
+  const { data, setData, setFav } = useContext(MyContext)
 
   const dataUpdate = data
 
@@ -12,9 +12,11 @@ function Card({ name, image, like }) {
     e.target.className === "fas fa-heart heartOff"
       ? (dataUpdate.splice(index, 1, { name: name, img: image, like: true }),
         setData(dataUpdate),
+        setFav(`true${index}`),
         (e.target.className = "fas fa-heart heartOn"))
       : (dataUpdate.splice(index, 1, { name: name, img: image, like: false }),
         setData(dataUpdate),
+        setFav(`false${index}`),
         (e.target.className = "fas fa-heart heartOff"))
   }
 
