@@ -9,9 +9,7 @@ const MyContextProvider = ({ children }) => {
   const apiUrl = "https://digimon-api.vercel.app/api/digimon"
 
   const getFav = () => {
-    console.log("UseEffect Data Modificada")
     setArray(data)
-    console.log(array)
   }
 
   useEffect(() => {
