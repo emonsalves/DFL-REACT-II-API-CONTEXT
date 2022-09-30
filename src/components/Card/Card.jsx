@@ -2,13 +2,20 @@ import { useContext, useState } from "react"
 import Heart from "../Heart/Heart"
 import MyContext from "../../context/MyContext"
 
-function Card({ name, image, like, index }) {
+function Card({ name, image, like }) {
   const { data, setData } = useContext(MyContext)
+
   const dataUpdate = data
 
-  const clickLike = () => {
-    dataUpdate.splice(index, 1, { name: name, img: image, like: true })
-    setData(dataUpdate)
+  const clickLike = (e) => {
+    const index = data.findIndex((item) => item.name === name)
+    e.target.className === "fas fa-heart heartOff"
+      ? (dataUpdate.splice(index, 1, { name: name, img: image, like: true }),
+        setData(dataUpdate),
+        (e.target.className = "fas fa-heart heartOn"))
+      : (dataUpdate.splice(index, 1, { name: name, img: image, like: false }),
+        setData(dataUpdate),
+        (e.target.className = "fas fa-heart heartOff"))
   }
 
   return (

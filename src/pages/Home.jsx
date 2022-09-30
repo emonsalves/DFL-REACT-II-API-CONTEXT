@@ -8,10 +8,9 @@ function Home() {
   return (
     <div className="Container flex flex-wrap gap-8 justify-center my-4">
       {data &&
-        data.map((dato, index) => (
+        data.map((dato, id) => (
           <Card
-            key={`${dato.name}-${index}`}
-            index={index}
+            key={`${dato.name}-${id}`}
             name={dato.name}
             image={dato.img}
             like={dato.like}

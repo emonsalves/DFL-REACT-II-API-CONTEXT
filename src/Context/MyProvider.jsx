@@ -15,10 +15,6 @@ const MyContextProvider = ({ children }) => {
     })()
   }, [])
 
-  // useEffect(() => {
-  //   console.log("hola")
-  // })
-
   return (
     <MyContext.Provider value={{ test, setTest, data, setData, apiUrl }}>
       {children}
