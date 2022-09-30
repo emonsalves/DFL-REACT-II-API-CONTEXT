@@ -4,7 +4,6 @@ import Home from "../pages/Home"
 import NotFound from "../pages/NotFound"
 
 function Main() {
-  
   return (
     <div>
       <Routes>
