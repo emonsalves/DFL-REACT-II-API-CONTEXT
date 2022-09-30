@@ -1,5 +1,5 @@
+import axios from "axios"
 import { useState, useEffect } from "react"
-
 import MyContext from "./MyContext"
 
 const MyContextProvider = ({ children }) => {
@@ -9,15 +9,11 @@ const MyContextProvider = ({ children }) => {
 
   useEffect(() => {
     ;(async function () {
-      let data = await fetch(apiUrl)
-        .then((response) => response.json())
-        .catch((error) => error)
-      let data2 = await data.map((x) => ({ ...x, like: false }))
+      let datos = await axios.get(apiUrl)
+      let data2 = await datos.data.map((x) => ({ ...x, like: false }))
       setData(data2)
     })()
-  }, [])
-
-  setData
+  }, [apiUrl])
 
   return (
     <MyContext.Provider value={{ test, setTest, data, setData, apiUrl }}>

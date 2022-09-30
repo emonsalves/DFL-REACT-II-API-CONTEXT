@@ -11,6 +11,7 @@ function Home() {
         data.map((dato, index) => (
           <Card
             key={`${dato.name}-${index}`}
+            id={index + 1}
             name={dato.name}
             image={dato.img}
             like={dato.like}
