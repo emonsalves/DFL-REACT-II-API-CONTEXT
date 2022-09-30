@@ -4,8 +4,15 @@ import MyContext from "./MyContext"
 
 const MyContextProvider = ({ children }) => {
   const [data, setData] = useState([])
+  const [array, setArray] = useState([])
+  const [fav, setFav] = useState("try")
   const apiUrl = "https://digimon-api.vercel.app/api/digimon"
-  const [test, setTest] = useState("test ok")
+
+  const getFav = () => {
+    console.log("UseEffect Data Modificada")
+    setArray(data)
+    console.log(array)
+  }
 
   useEffect(() => {
     ;(async function () {
@@ -15,8 +22,12 @@ const MyContextProvider = ({ children }) => {
     })()
   }, [])
 
+  useEffect(() => {
+    getFav()
+  }, [fav])
+
   return (
-    <MyContext.Provider value={{ test, setTest, data, setData, apiUrl }}>
+    <MyContext.Provider value={{ data, setData, apiUrl, setFav, fav, array }}>
       {children}
     </MyContext.Provider>
   )
