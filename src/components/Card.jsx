@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import Heart from "./Heart/Heart"
 import MyContext from "../context/MyContext"
 
@@ -22,7 +23,10 @@ function Card({ name, image, like }) {
 
   return (
     <div className="card w-[250px] shadow-xl bg-white rounded-lg hover:scale-105 duration-300">
-      <img src={image} alt={name} className="rounded-lg" />
+          <Link to={"/Loadi"}>
+            <img src={image} alt={name} className="rounded-lg" />
+          </Link>
+
       <div
         className="flex -translate-y-64 mr-3 mt-2 float-right"
         onClick={clickLike}
